@@ -353,7 +353,7 @@ MonoBehaviour:
   Fireball_red: {fileID: 2949198380218171781, guid: bef3ac2420faca948b86946fe2bb42ba, type: 3}
   Fireball_blue: {fileID: 6774731248516473852, guid: d99dae7a57d2ce54e9797440c1084646, type: 3}
   Fireball_turquoise: {fileID: 4083800633125331806, guid: 3924fb51781ddf14097f613fe7dfab84, type: 3}
-  cam: {fileID: 0}
+  cam: {fileID: 1906858845}
 --- !u!4 &464042819
 Transform:
   m_ObjectHideFlags: 0

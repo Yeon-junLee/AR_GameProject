@@ -11,14 +11,16 @@ public class Firefireball : MonoBehaviour
     private ChooseManager choosemanager = null;
 
     private Vector3 touchedPos;
-
     public Camera cam;
-
     private float power = 5.0f;
+
+    AudioSource audioSource;
     void Start()
     {
         GameObject cmObject = GameObject.Find("ChooseMangaer");
         choosemanager = cmObject.GetComponent<ChooseManager>();
+
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -43,6 +45,8 @@ public class Firefireball : MonoBehaviour
 
             Vector3 direction = cam.transform.localRotation * Vector3.forward + new Vector3(0.0f, 1.5f, 0.0f);
             fireball_red.GetComponent<Rigidbody>().velocity = direction * power;
+
+            audioSource.Play();
         }
         else if (choosemanager.Fire_blue == true)
         {
@@ -51,6 +55,8 @@ public class Firefireball : MonoBehaviour
 
             Vector3 direction = cam.transform.localRotation * Vector3.forward + new Vector3(0.0f, 1.5f, 0.0f);
             fireball_blue.GetComponent<Rigidbody>().velocity = direction * power;
+
+            audioSource.Play();
         }
         else if (choosemanager.Fire_blue == true)
         {
@@ -59,6 +65,8 @@ public class Firefireball : MonoBehaviour
 
             Vector3 direction = cam.transform.localRotation * Vector3.forward + new Vector3(0.0f, 1.5f, 0.0f);
             fireball_tur.GetComponent<Rigidbody>().velocity = direction * power;
+
+            audioSource.Play();
         }
     }
 }
