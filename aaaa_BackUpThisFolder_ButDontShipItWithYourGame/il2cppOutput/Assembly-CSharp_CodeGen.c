@@ -46,13 +46,27 @@ extern void LifeManager_SnowManHit_m60CD2735992745AA51B65D04032A58563EAB454A (vo
 extern void LifeManager_Update_m30FE9748ECC76B1D7B275BD9E4E0F7AD6AD23786 (void);
 // 0x00000011 System.Void LifeManager::.ctor()
 extern void LifeManager__ctor_mE84B9B1626A981FFADCF9B3005CF0BDB3AD0EE04 (void);
-// 0x00000012 System.Void TimeManager::Start()
+// 0x00000012 System.Void RandomRespone::Start()
+extern void RandomRespone_Start_mB0D1C592BCC58EFAA40B69EF3357ED28D08BEBF9 (void);
+// 0x00000013 System.Void RandomRespone::Update()
+extern void RandomRespone_Update_mC0993EDA63E5D6C49B71EE308AE5F8EA9424CA23 (void);
+// 0x00000014 System.Void RandomRespone::Spawn()
+extern void RandomRespone_Spawn_m25E9A6AE3876DA9F13E1A3D9661190E9125BBB4E (void);
+// 0x00000015 UnityEngine.Vector3 RandomRespone::GetRandomPosition()
+extern void RandomRespone_GetRandomPosition_m01647FCF372182549C6C0721FA89402B4FB60BF6 (void);
+// 0x00000016 System.Void RandomRespone::.ctor()
+extern void RandomRespone__ctor_m1B7A51948A4D7A1DFC1DA800D7AAB724CBB6A796 (void);
+// 0x00000017 System.Void TimeManager::Start()
 extern void TimeManager_Start_mED95DF42E6AF580037B63BC07CB1DBBF661A1B48 (void);
-// 0x00000013 System.Void TimeManager::Update()
+// 0x00000018 System.Void TimeManager::Update()
 extern void TimeManager_Update_mBD274F31E81B84633AB928E2384AFF4BEC822E7C (void);
-// 0x00000014 System.Void TimeManager::.ctor()
+// 0x00000019 System.Void TimeManager::.ctor()
 extern void TimeManager__ctor_m6694D6AACB3E1D767E0EB7D0E2656EE808204877 (void);
-static Il2CppMethodPointer s_methodPointers[20] = 
+// 0x0000001A System.Void MovingSnowMan::Update()
+extern void MovingSnowMan_Update_m934FC5A4D38DA1E9C7587112884A7056CE03D340 (void);
+// 0x0000001B System.Void MovingSnowMan::.ctor()
+extern void MovingSnowMan__ctor_mE73EDDD3ACC62C739C86D561F37BEADB11DE5922 (void);
+static Il2CppMethodPointer s_methodPointers[27] = 
 {
 	ARSceneManager_GotoScene_mBAE9C27FB450773559385511F9A54CACDD87C65C,
 	ARSceneManager_QuitGame_m3FCC69DC7E7BD5D129B1F6920BA52DE119371782,
@@ -71,11 +85,18 @@ static Il2CppMethodPointer s_methodPointers[20] =
 	LifeManager_SnowManHit_m60CD2735992745AA51B65D04032A58563EAB454A,
 	LifeManager_Update_m30FE9748ECC76B1D7B275BD9E4E0F7AD6AD23786,
 	LifeManager__ctor_mE84B9B1626A981FFADCF9B3005CF0BDB3AD0EE04,
+	RandomRespone_Start_mB0D1C592BCC58EFAA40B69EF3357ED28D08BEBF9,
+	RandomRespone_Update_mC0993EDA63E5D6C49B71EE308AE5F8EA9424CA23,
+	RandomRespone_Spawn_m25E9A6AE3876DA9F13E1A3D9661190E9125BBB4E,
+	RandomRespone_GetRandomPosition_m01647FCF372182549C6C0721FA89402B4FB60BF6,
+	RandomRespone__ctor_m1B7A51948A4D7A1DFC1DA800D7AAB724CBB6A796,
 	TimeManager_Start_mED95DF42E6AF580037B63BC07CB1DBBF661A1B48,
 	TimeManager_Update_mBD274F31E81B84633AB928E2384AFF4BEC822E7C,
 	TimeManager__ctor_m6694D6AACB3E1D767E0EB7D0E2656EE808204877,
+	MovingSnowMan_Update_m934FC5A4D38DA1E9C7587112884A7056CE03D340,
+	MovingSnowMan__ctor_mE73EDDD3ACC62C739C86D561F37BEADB11DE5922,
 };
-static const int32_t s_InvokerIndices[20] = 
+static const int32_t s_InvokerIndices[27] = 
 {
 	3575,
 	4418,
@@ -91,6 +112,13 @@ static const int32_t s_InvokerIndices[20] =
 	4418,
 	4418,
 	4418,
+	4418,
+	4418,
+	4418,
+	4418,
+	4418,
+	4418,
+	4410,
 	4418,
 	4418,
 	4418,
@@ -102,7 +130,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	20,
+	27,
 	s_methodPointers,
 	0,
 	NULL,
