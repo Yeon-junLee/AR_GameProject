@@ -9,6 +9,7 @@ public class Firefireball : MonoBehaviour
     public GameObject Fireball_turquoise;
 
     private ChooseManager choosemanager = null;
+    private LifeManager lifemanager = null;
 
     private Vector3 touchedPos;
     public Camera cam;
@@ -20,12 +21,18 @@ public class Firefireball : MonoBehaviour
         GameObject cmObject = GameObject.Find("ChooseMangaer");
         choosemanager = cmObject.GetComponent<ChooseManager>();
 
+        GameObject lmObject = GameObject.Find("LifeMangaer");
+        lifemanager = lmObject.GetComponent<LifeManager>();
+
         audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (lifemanager.GameOver)
+            return;
+
         if (Input.touchCount == 0)
             return;
 
