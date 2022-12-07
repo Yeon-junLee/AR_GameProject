@@ -11,12 +11,6 @@ public class TimeManager : MonoBehaviour
 
     public TextMeshProUGUI timetext = null;
 
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
     void Update()
     {
         time += Time.deltaTime;
