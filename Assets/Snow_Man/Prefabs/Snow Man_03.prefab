@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7517582969202685842}
   - component: {fileID: 6803347993519642372}
   - component: {fileID: 3359618684608122352}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: L_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -94,9 +94,9 @@ GameObject:
   - component: {fileID: 3092005903711536487}
   - component: {fileID: 3270663920357892750}
   - component: {fileID: 5749560665070483013}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Snow Man_03
-  m_TagString: Untagged
+  m_TagString: snowman_red
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 5881633406429446401}
   - component: {fileID: 2344128211424101516}
   - component: {fileID: 1305835607706988107}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: R_Hand
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +242,7 @@ GameObject:
   - component: {fileID: 4434503189175129235}
   - component: {fileID: 8325358141843490412}
   - component: {fileID: 4650248575002259100}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body_Lower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -325,7 +325,7 @@ GameObject:
   - component: {fileID: 4624909084067743716}
   - component: {fileID: 4436454602985350880}
   - component: {fileID: 7723174497397578455}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Head
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -408,7 +408,7 @@ GameObject:
   - component: {fileID: 5587191849504098063}
   - component: {fileID: 4145813483465725385}
   - component: {fileID: 478625596685383001}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Hat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -491,7 +491,7 @@ GameObject:
   - component: {fileID: 1430497901264655058}
   - component: {fileID: 3720040625292430772}
   - component: {fileID: 15288904220857050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Body_Stomach
   m_TagString: Untagged
   m_Icon: {fileID: 0}

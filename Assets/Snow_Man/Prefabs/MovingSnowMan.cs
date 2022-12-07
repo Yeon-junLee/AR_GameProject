@@ -6,7 +6,18 @@ public class MovingSnowMan : MonoBehaviour
 {
     public GameObject TargetPosition;
     float speed = 2.0f;
-    float time = 0.0f; 
+    float time = 0.0f;
+
+    private LifeManagerScript lifeManager = null;
+
+    void Start()
+    {
+
+        lifeManager = GameObject.Find("LifeMangaer").GetComponent<LifeManagerScript>();
+        //lifemanager = lmObject.GetComponent<LifeManager>();
+
+       
+    }
     // Update is called once per frame
     void Update()
     {
@@ -26,7 +37,21 @@ public class MovingSnowMan : MonoBehaviour
 
         if(Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.y, 2) + Mathf.Pow(transform.position.z, 2)) < 5)
         {
+            lifeManager.SnowManHit();   
             Destroy(gameObject);
+            
         }
+
+
+
     }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        
+            Destroy(gameObject);
+        
+    }
+
+
 }

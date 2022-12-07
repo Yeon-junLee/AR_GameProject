@@ -1,6 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.XR.ARFoundation;
+using UnityEngine.XR.ARSubsystems;
+using UnityEngine.XR.ARKit;
 
 public class Firefireball : MonoBehaviour
 {
@@ -9,28 +12,26 @@ public class Firefireball : MonoBehaviour
     public GameObject Fireball_turquoise;
 
     private ChooseManager choosemanager = null;
-    private LifeManager lifemanager = null;
+    private LifeManagerScript lifemanager = null;
 
-    private Vector3 touchedPos;
-    public Camera cam;
-    private float power = 5.0f;
+    public Transform arCamera;
+    private float power = 30.0f;
 
     AudioSource audioSource;
     void Start()
     {
-        GameObject cmObject = GameObject.Find("ChooseMangaer");
+        GameObject cmObject = GameObject.Find("ChooseManager");
         choosemanager = cmObject.GetComponent<ChooseManager>();
 
-        GameObject lmObject = GameObject.Find("LifeMangaer");
-        lifemanager = lmObject.GetComponent<LifeManager>();
+        GameObject lmObject = GameObject.Find("LifeManager");
+        lifemanager = lmObject.GetComponent<LifeManagerScript>();
 
         audioSource = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (lifemanager.GameOver)
+        if (lifemanager.GameOver == true)
             return;
 
         if (Input.touchCount == 0)
@@ -40,38 +41,30 @@ public class Firefireball : MonoBehaviour
         if (touch.phase != TouchPhase.Began)
             return;
 
-        touchedPos = Camera.main.ScreenToWorldPoint(touch.position);
-
         if (choosemanager.Fire_red == false && choosemanager.Fire_blue == false && choosemanager.Fire_tur == false)
             return;
 
-        if(choosemanager.Fire_red == true)
+        if (choosemanager.Fire_red == true && touch.phase == TouchPhase.Began)
         {
-            GameObject fireball_red = Instantiate(Fireball_red);
-            fireball_red.transform.position = touchedPos;
 
-            Vector3 direction = cam.transform.localRotation * Vector3.forward + new Vector3(0.0f, 1.5f, 0.0f);
-            fireball_red.GetComponent<Rigidbody>().velocity = direction * power;
+            GameObject fireball_red = Instantiate(Fireball_red, arCamera.position, arCamera.rotation) as GameObject;
+            fireball_red.GetComponent<Rigidbody>().velocity = (arCamera.forward * power);
 
             audioSource.Play();
         }
-        else if (choosemanager.Fire_blue == true)
+        else if (choosemanager.Fire_blue == true && touch.phase == TouchPhase.Began)
         {
-            GameObject fireball_blue = Instantiate(Fireball_blue);
-            fireball_blue.transform.position = touchedPos;
 
-            Vector3 direction = cam.transform.localRotation * Vector3.forward + new Vector3(0.0f, 1.5f, 0.0f);
-            fireball_blue.GetComponent<Rigidbody>().velocity = direction * power;
+            GameObject fireball_blue = Instantiate(Fireball_blue, arCamera.position, arCamera.rotation) as GameObject;
+            fireball_blue.GetComponent<Rigidbody>().velocity = (arCamera.forward * power);
 
             audioSource.Play();
         }
-        else if (choosemanager.Fire_blue == true)
+        else if (choosemanager.Fire_tur == true && touch.phase == TouchPhase.Began)
         {
-            GameObject fireball_tur = Instantiate(Fireball_turquoise);
-            fireball_tur.transform.position = touchedPos;
 
-            Vector3 direction = cam.transform.localRotation * Vector3.forward + new Vector3(0.0f, 1.5f, 0.0f);
-            fireball_tur.GetComponent<Rigidbody>().velocity = direction * power;
+            GameObject fireball_tur = Instantiate(Fireball_turquoise, arCamera.position, arCamera.rotation) as GameObject;
+            fireball_tur.GetComponent<Rigidbody>().velocity = (arCamera.forward * power);
 
             audioSource.Play();
         }

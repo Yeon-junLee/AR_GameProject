@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - snowman_red
+  - snowman_blue
+  - snowman_tur
   layers:
   - Default
   - TransparentFX
@@ -11,9 +14,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Fireball_BLUE
+  - Fireball_TUR
+  - Fireball_RED
   - 
   - 
   - 

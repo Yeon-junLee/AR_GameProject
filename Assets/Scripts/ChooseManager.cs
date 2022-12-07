@@ -7,6 +7,7 @@ public class ChooseManager : MonoBehaviour
     public bool Fire_red = false;
     public bool Fire_blue = false;
     public bool Fire_tur = false;
+
     public void Choose_Red()
     {
         Fire_red = true;
