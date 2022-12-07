@@ -12,6 +12,7 @@ public class ChooseManager : MonoBehaviour
         Fire_red = true;
         Fire_blue = false;
         Fire_tur = false;
+        Debug.Log("Red is chosen!");
     }
 
     public void Choose_Blue()
@@ -19,6 +20,7 @@ public class ChooseManager : MonoBehaviour
         Fire_red = false;
         Fire_blue = true;
         Fire_tur = false;
+        Debug.Log("Blue is chosen!");
     }
 
     public void Choose_Turquoise()
@@ -26,5 +28,6 @@ public class ChooseManager : MonoBehaviour
         Fire_red = false;
         Fire_blue = false;
         Fire_tur = true;
+        Debug.Log("Turquoise is chosen!");
     }
 }
