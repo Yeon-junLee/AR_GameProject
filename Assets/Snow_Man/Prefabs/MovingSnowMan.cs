@@ -6,8 +6,16 @@ public class MovingSnowMan : MonoBehaviour
 {
     public GameObject TargetPosition;
     float speed = 2.0f;
-    float time = 0.0f; 
-    // Update is called once per frame
+    float time = 0.0f;
+
+    public AudioClip SnowmanAttack;
+    AudioSource audioSource;
+
+    void Awake()
+    {
+        this.audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
         time += Time.deltaTime; 
@@ -26,6 +34,8 @@ public class MovingSnowMan : MonoBehaviour
 
         if(Mathf.Sqrt(Mathf.Pow(transform.position.x, 2) + Mathf.Pow(transform.position.y, 2) + Mathf.Pow(transform.position.z, 2)) < 5)
         {
+            audioSource.clip = SnowmanAttack;
+            audioSource.Play();
             Destroy(gameObject);
         }
     }

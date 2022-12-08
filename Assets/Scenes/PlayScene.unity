@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -922,6 +922,7 @@ MonoBehaviour:
   - {fileID: 3665448684949034829, guid: 668caeef3f091244986846c489fc2dd6, type: 3}
   - {fileID: 3683714842541576997, guid: 82f43bc5f35ff4f05a60eb50e0d8ac33, type: 3}
   - {fileID: 2423730791131602909, guid: 8e73557c547bf46d79a889cd0b789f4a, type: 3}
+  SnowmanSpawn: {fileID: 8300000, guid: a27b31a2d5fc42349a78ef8a50da0654, type: 3}
 --- !u!1 &1049124346
 GameObject:
   m_ObjectHideFlags: 0

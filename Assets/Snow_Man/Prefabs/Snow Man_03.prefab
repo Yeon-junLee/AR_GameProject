@@ -148,6 +148,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   TargetPosition: {fileID: 4688708839720631730, guid: 4cd1ef8c15fb0432c954c68010bf988f, type: 3}
+  SnowmanAttack: {fileID: 8300000, guid: 8fac85f87f03a2848b579485cbba2f5e, type: 3}
 --- !u!1 &3108150349682041646
 GameObject:
   m_ObjectHideFlags: 0

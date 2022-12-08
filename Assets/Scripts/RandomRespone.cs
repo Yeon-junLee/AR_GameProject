@@ -7,10 +7,13 @@ public class RandomRespone : MonoBehaviour
     public GameObject[] prefabs;
     float time = 0.0f;
     private List<GameObject> gameObject = new List<GameObject>();
-    // Start is called before the first frame update
-    void Start()
+
+    public AudioClip SnowmanSpawn;
+    AudioSource audioSource;
+    
+    void Awake()
     {
-        
+        this.audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -33,6 +36,8 @@ public class RandomRespone : MonoBehaviour
 
         Vector3 spawnPos = GetRandomPosition();//랜덤위치함수
 
+        audioSource.clip = SnowmanSpawn;
+        audioSource.Play();
         GameObject instance = Instantiate(selectedPrefab, spawnPos, Quaternion.identity);
         gameObject.Add(instance); // 관리
     }
