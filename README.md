@@ -5,3 +5,5 @@
 Unity에서 제공하는 AR Foundation을 기반으로 제작되었습니다.
 
 ### [인 게임 영상](https://youtu.be/hV5o8jrtjow?si=SIaLxwyQPxHJGAHh)
+
+![AR 인게임](https://github.com/Yeon-junLee/AR_GameProject/assets/83509116/343ab1b2-79ed-4c92-ac57-80465bc87b6f)
